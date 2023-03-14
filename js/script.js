@@ -40,7 +40,8 @@ const { createApp } = Vue
             }
         ],
 
-        activeIndex: 0
+        activeIndex: 0,
+        autoPlay: setInterval(this.nextSlide, 3000)
       }
 
     },
@@ -67,10 +68,18 @@ const { createApp } = Vue
             this.activeIndex = index;
         },
 
+        stopAutoplay(){
+            clearInterval(this.autoPlay);
+        },
+
+        goAutoplay(){
+            setInterval(this.nextSlide, 3000)
+        }
+
     },
 
     mounted(){
-        setInterval(this.nextSlide, 3000);
+        this.autoPlay;
     }
 
     
