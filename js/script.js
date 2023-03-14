@@ -73,7 +73,7 @@ const { createApp } = Vue
         },
 
         goAutoplay(){
-            setInterval(this.nextSlide, 3000)
+            this.autoPlay = setInterval(this.nextSlide, 3000)
         }
 
     },
