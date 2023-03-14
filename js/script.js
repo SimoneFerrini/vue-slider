@@ -65,7 +65,12 @@ const { createApp } = Vue
 
         activeThumb(index){
             this.activeIndex = index;
-        }
+        },
+
+    },
+
+    mounted(){
+        setInterval(this.nextSlide, 3000);
     }
 
     
