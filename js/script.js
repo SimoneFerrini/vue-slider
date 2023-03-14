@@ -61,6 +61,10 @@ const { createApp } = Vue
             }else {
                 this.activeIndex--;
             }
+        },
+
+        activeThumb(index){
+            this.activeIndex = index;
         }
     }
 
